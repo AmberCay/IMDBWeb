@@ -35,29 +35,27 @@ jQuery(() => {
     })
 
     $("#nav-movies").on('click', () => {
-        let listedMovies = ""
-        for (const movie in moviesList) {
-            listedMovies += `<div class="col">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="${movie.photo}" class="card-img-top img-fluid" alt="${movie.title}">
-                                    <div class="card-body">
-                                    <h5 class="card-title">${movie.title}</h5>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Release Year -- ${movie.releaseYear}</li>
-                                        <li class="list-group-item">Nationality -- ${movie.nationality}</li>
-                                        <li class="list-group-item">Genre -- ${movie.releaseYear}</li>
-                                        <li class="list-group-item">Actors -- ${movie.actors}</li>
-                                        <li class="list-group-item">Release Year -- ${movie.releaseYear}</li>
-                                        <li class="list-group-item">Writer -- ${movie.writer}</li>
-                                        <li class="list-group-item">Director -- ${movie.director}</li>
-                                    </ul>
-                                    <div class="card-body">
-                                    <a href="#" class="card-link">More info</a>
-                                    </div>
-                                </div>
-                            </div>`}
-                            console.log(listedMovies);
-        $("#movie-area").append(listedMovies)
-               
+        $("#movie-area").empty()
+        for (const movie of moviesList) {
+            $("#movie-area").append(`<div class="col">
+                                        <div class="card mb-2" style="width: 18rem;">
+                                            <img src="${movie.photo}" class="card-img-top img-fluid" alt="${movie.title}">
+                                            <div class="card-body">
+                                            <h5 class="card-title">${movie.title}</h5>
+                                            <ul class="list-group list-group-flush" id="card-info">
+                                                <li class="list-group-item">Release Year -- ${movie.releaseYear}</li>
+                                                <li class="list-group-item">Nationality -- ${movie.nationality}</li>
+                                                <li class="list-group-item">Genre -- ${movie.releaseYear}</li>
+                                                <li class="list-group-item">Actors -- ${movie.actors}</li>
+                                                <li class="list-group-item">Release Year -- ${movie.releaseYear}</li>
+                                                <li class="list-group-item">Writer -- ${movie.writer}</li>
+                                                <li class="list-group-item">Director -- ${movie.director}</li>
+                                            </ul>
+                                            <div class="card-body">
+                                            <a href="#" class="card-link">More info</a>
+                                            </div>
+                                        </div>
+                                    </div>`)
+                }
     })
 })

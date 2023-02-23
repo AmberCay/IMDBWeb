@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="movies.js"></script>
     <title>Bootstrap demo</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -15,7 +16,7 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">
+        <a class="navbar-brand text-white" href="index.html">
           <img
             src="http://icons.iconarchive.com/icons/danleech/simple/1024/imdb-icon.png"
             alt="Logo"
@@ -40,7 +41,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Movie form</a>
+              <a class="nav-link text-white" href="#form">Movie form</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -53,8 +54,8 @@
                 Browse
               </a>
               <ul class="dropdown-menu bg-dark">
-                <li><a class="dropdown-item text-white" href="" id="nav-movies">Movies</a></li>
-                <li><a class="dropdown-item text-white" href="#">People</a></li>
+                <li><a class="dropdown-item text-white" href="#" id="nav-movies">Movies</a></li>
+                <li><a class="dropdown-item text-white" href="#" id="nav-professional">People</a></li>
               </ul>
             </li>
           </ul>
@@ -62,13 +63,12 @@
       </div>
     </nav>
     <div class="container-fluid d-flex flex-column align-items-center bg-success" >
-        <h2>Movies</h2>
+        <h2 class="p-3 tex">Movies</h2>
         <div class="row" id="movie-area">
-            <div class="col bg-primary"><h2>Wow</h2></div>
         </div>
     </div>
     <div class="container-md">
-      <form>
+      <form id="form">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Title</label>
           <input type="text" class="form-control" id="title" />
