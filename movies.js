@@ -45,7 +45,7 @@ jQuery(() => {
                                             <ul class="list-group list-group-flush" id="card-info">
                                                 <li class="list-group-item">Release Year -- ${movie.releaseYear}</li>
                                                 <li class="list-group-item">Nationality -- ${movie.nationality}</li>
-                                                <li class="list-group-item">Genre -- ${movie.releaseYear}</li>
+                                                <li class="list-group-item">Genre -- ${movie.genre}</li>
                                                 <li class="list-group-item">Actors -- ${movie.actors}</li>
                                                 <li class="list-group-item">Release Year -- ${movie.releaseYear}</li>
                                                 <li class="list-group-item">Writer -- ${movie.writer}</li>
